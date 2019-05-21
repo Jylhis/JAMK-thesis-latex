@@ -1,0 +1,246 @@
+\documentclass{jamk-thesis}
+
+\title{Example title}
+\undertitle{Under title}
+\tyyppi{test thesis}
+\author{Firstname Lastname}
+\date{Month Year}
+\ala{Information and communication technology}
+\tutkinto{Degree Programme in Software Engineering}
+
+
+\begin{document}
+\maketitle
+\newpage
+
+% Keskeneräinen kuvaus
+% TODO: Siirrä cls tiedostoon, \makedescription komennon sisälle
+\pagenumbering{gobble}
+\clearpage
+\begin{table}
+\small
+\begin{tabular}{|l|l|l|}
+\hline
+\multirow{3}{*}{
+\begin{tabular}[c]{@{}l@{}}
+    Tekijä(t)\\
+\end{tabular}} &
+\begin{tabular}[c]{@{}l@{}}
+    Julkaisun laji\\
+    Opinnäytetyö, AMK\end{tabular} &
+\begin{tabular}[c]{@{}l@{}}
+    Päivämäärä\\
+    Toukokuu 2019
+    %\mydate
+\end{tabular}
+\\ \cline{2-3} &
+\multirow{2}{*}{
+\begin{tabular}[c]{@{}l@{}}
+    Sivumäärä\\
+    \pageref{LastPage}
+\end{tabular}}   &
+\begin{tabular}[c]{@{}l@{}}
+    Julkaisun kieli:\\
+    Englanti\end{tabular}
+\\ \cline{3-3} & &
+    Verkkojulkaisulupa: x
+\\ \hline
+\multicolumn{3}{|l|}{
+\begin{tabular}[c]{@{}l@{}}
+    Työn nimi\\
+    \textbf{Nimi}
+    \\ \\
+\end{tabular}}
+\\ \hline
+\multicolumn{3}{|l|}{
+\begin{tabular}[c]{@{}l@{}}
+    Tutkinto-ohjelma\\
+   
+\end{tabular}}
+\\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}
+    Työn ohjaaja(t)\\
+\end{tabular}}
+\\ \hline
+\multicolumn{3}{|l|}{
+\begin{tabular}[c]{@{}l@{}}
+    Toimeksiantaja(t)\\
+    
+\end{tabular}}
+\\ \hline
+\multicolumn{3}{|l|}{
+\begin{tabular}[c]{@{}l@{}}
+Tiivistelmä  \\ \\
+
+\end{tabular}}
+\\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}
+Avainsanat (subjects)\\
+
+\end{tabular}}
+\\ \hline
+\multicolumn{3}{|l|}{\begin{tabular}[c]{@{}l@{}}
+Muut tiedot \\ \\
+
+\end{tabular}}
+\\ \hline
+\end{tabular}
+\end{table}
+\FloatBarrier
+\clearpage
+
+%\clearpage
+\pagenumbering{arabic}
+\tableofcontents
+\newpage
+
+
+\listoffigures
+\listoftables
+
+
+%\lstlistoflistings
+\pagebreak
+
+\section*{Without numbering}
+LPI \quad Lorem IPsum
+
+LPI \quad Lorem IPsum
+
+\section{test document}
+
+This is a test document.
+
+Suspendisse consequat lectus urna, vel hendrerit tortor euismod quis. Aliquam
+diam urna, rhoncus at suscipit nec, pellentesque sed tellus. Fusce auctor
+dignissim purus vel maximus. Morbi faucibus, lectus eget tempor posuere, tellus
+ex imperdiet nibh, sed ultricies risus diam vitae nisi. Sed sed augue
+malesuada, fringilla sem rutrum, molestie erat.  Phasellus non fringilla ex.
+Integer eu lacinia est. Mauris commodo arcu eu consectetur condimentum. Donec
+at ipsum at nisl blandit commodo a vitae nulla.  Quisque luctus sit amet turpis
+vitae auctor. Nunc blandit metus ligula, nec auctor tortor sollicitudin et.
+Nullam tristique efficitur ipsum, vel laoreet sapien lobortis at. Ut aliquet,
+nulla id lobortis scelerisque, neque ante hendrerit turpis, vitae maximus sem
+neque quis felis. Ut metus ante, sodales eu tincidunt eu, lobortis id mauris.
+
+
+
+\image[2in]{jamk.png}{fig:jamk}{Test caption}
+
+Let's reference the test picture! Picture \ref{fig:dice} is a picture of
+dice!
+
+
+Suspendisse consequat lectus urna, vel hendrerit tortor euismod quis. Aliquam
+diam urna, rhoncus at suscipit nec, pellentesque sed tellus. Fusce auctor
+dignissim purus vel maximus. Morbi faucibus, lectus eget tempor posuere, tellus
+ex imperdiet nibh, sed ultricies risus diam vitae nisi. Sed sed augue
+malesuada, fringilla sem rutrum, molestie erat.  Phasellus non fringilla ex.
+Integer eu lacinia est. Mauris commodo arcu eu consectetur condimentum. Donec
+at ipsum at nisl blandit commodo a vitae nulla.  Quisque luctus sit amet turpis
+vitae auctor. Nunc blandit metus ligula, nec auctor tortor sollicitudin et.
+
+Time for a table!
+
+
+
+Let's cite a reference without any additional information: \cite{singularity}
+
+Let's cite a reference some additional information: \cite[p. 123]{singularity}
+
+\jtable
+    {Different types of dice}   % Caption
+    {tbl:dicetypes}             % Label that is used to refence the table
+    {l r l}                     % Table layout
+    {
+        % Table data
+        \textbf{Type} & \textbf{Number of sides} & \textbf{Usage} \\
+        D4 & 4 & Tabletop RPGs \\
+        D6 & 6 & Gambling, games... \\
+        D10 & 10 & Tabletop RPGs \\
+        D20 & 20 & Tabletop RPGs \\
+        D100 & 100 & Tabletop RPGs \\
+    }
+    
+Suspendisse consequat lectus urna, vel hendrerit tortor euismod quis. Aliquam
+diam urna, rhoncus at suscipit nec, pellentesque sed tellus. Fusce auctor
+dignissim purus vel maximus. Morbi faucibus, lectus eget tempor posuere, tellus
+ex imperdiet nibh, sed ultricies risus diam vitae nisi. Sed sed augue
+malesuada, fringilla sem rutrum, molestie erat.  Phasellus non fringilla ex.
+Nullam tristique efficitur ipsum, vel laoreet sapien lobortis at. Ut aliquet,
+nulla id lobortis scelerisque, neque ante hendrerit turpis, vitae maximus sem
+neque quis felis. Ut metus ante, sodales eu tincidunt eu, lobortis id mauris.
+
+Let's reference our fine table: Table \ref{tbl:dicetypes} contains information
+about different kinds of dice!
+
+
+\subsection{lorem ipsum}
+
+Suspendisse consequat lectus urna, vel hendrerit tortor euismod quis. Aliquam
+diam urna, rhoncus at suscipit nec, pellentesque sed tellus. Fusce auctor
+dignissim purus vel maximus. Morbi faucibus, lectus eget tempor posuere, tellus
+ex imperdiet nibh, sed ultricies risus diam vitae nisi. Sed sed augue
+malesuada, fringilla sem rutrum, molestie erat.  Phasellus non fringilla ex.
+Nullam tristique efficitur ipsum, vel laoreet sapien lobortis at. Ut aliquet,
+nulla id lobortis scelerisque, neque ante hendrerit turpis, vitae maximus sem
+neque quis felis. Ut metus ante, sodales eu tincidunt eu, lobortis id mauris.
+
+\begin{lstlisting}[language=python, caption=Example code block]
+# Import the modules
+import sys
+import random
+
+ans = True
+
+while ans:
+    question = raw_input("Ask the magic 8 ball a question: (press enter to quit) ")
+    
+    answers = random.randint(1,8)
+    
+    if question == "":
+        sys.exit()
+    elif answers == 1:
+        print "It is certain"
+    elif answers == 2:
+        print "Outlook good"
+    elif answers == 3:
+        print "You may rely on it"
+    elif answers == 4:
+        print "Ask again later"
+    elif answers == 5:
+        print "Concentrate and ask again"
+    elif answers == 6:
+        print "Reply hazy, try again"
+    elif answers == 7:
+        print "My reply is no"
+    elif answers == 8:
+        print "My sources say no"
+\end{lstlisting}
+
+\subsubsection{more lorem ipsum}
+
+Suspendisse consequat facilisis lacus, eget varius neque. Mauris blandit id
+tellus vel consectetur. Integer porta tempor arcu, quis sodales urna posuere a.
+Phasellus a lacinia dolor. Nam nec dui massa. Praesent vestibulum purus ac
+felis volutpat vehicula. Sed sem nisl, hendrerit id gravida at, condimentum
+hendrerit massa.  Maecenas vitae erat laoreet, semper enim sit amet,
+condimentum ipsum. \cite{singularity2}
+
+Donec at porttitor nibh. Suspendisse feugiat consequat ornare.  Mauris varius
+porttitor libero ut facilisis. Pellentesque quis eros eros. Donec quis cursus
+lorem. In eget diam felis. Sed dictum, tellus bibendum dictum commodo, ligula
+felis semper nisl, ac molestie magna lacus vitae turpis. In volutpat nunc at
+finibus vehicula. Vestibulum pretium at nibh in tempor. Cras sed mi sit amet
+orci scelerisque mollis. Donec aliquet laoreet augue, ut malesuada massa semper
+a. Suspendisse ac mi luctus, fringilla odio pellentesque, congue lorem.
+Curabitur varius nunc eu elit mattis, sed gravida urna hendrerit. Duis eget
+enim eget massa faucibus finibus. Suspendisse potenti. Interdum et malesuada
+fames ac ante ipsum primis in faucibus.
+
+\newpage
+\renewcommand{\baselinestretch}{1}
+\printbibliography
+\addcontentsline{toc}{section}{\protect\numberline{}References}
+
+\end{document}
